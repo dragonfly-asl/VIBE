@@ -65,7 +65,7 @@ def main(args):
     if not os.path.isfile(video_file):
         exit(f'Input video \"{video_file}\" does not exist!')
 
-    output_path = os.path.join(args.output_folder, os.path.basename(video_file).replace('.mp4', ''))
+    output_path = os.path.join(args.output_folder, os.path.basename(video_file).replace('.mp4', '').replace('.mov','').replace('.avi',''))
     os.makedirs(output_path, exist_ok=True)
 
     image_folder, num_frames, img_shape = video_to_images(video_file, return_info=True)
