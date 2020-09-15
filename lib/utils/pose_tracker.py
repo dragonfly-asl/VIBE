@@ -37,6 +37,7 @@ def run_openpose(
     cmd = [
         'build/examples/openpose/openpose.bin',
         '--model_pose', 'BODY_21A',
+        '--num_gpu', '1',
         '--tracking', '1',
         '--render_pose', str(render),
         '--video', video_file,
